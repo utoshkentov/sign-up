@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Header} from "./components/Header/Header";
+import {HomePage} from "./page/homepage/homepage.component";
+import {Route, Switch} from 'react-router-dom'
+import SignAndSignUp from "./page/sign-and-sign-up/sign-and-sign-up";
+import ParticlesBg from "particles-bg";
 
-function App() {
+
+const App = () => {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+        <ParticlesBg type="cobweb" bg={true} style={{width: '100%', height: '100%'}}/>
+      <Switch>
+        <Route exact path="/" component={HomePage}/>
+        <Route exact path="/SignUp" component={SignAndSignUp} />
+      </Switch>
     </div>
   );
 }
+
 
 export default App;

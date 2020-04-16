@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    .option_one {
+        width: 90%;
+        color: azure !important;
+        padding-left: 0;
+        text-align: left;
+        .link {
+            color: white !important;
+        }
+    }
+
+    .option_two {
+        width: 10%;
+        color: azure !important;
+        padding-left: 0;
+
+        .link {
+            color: white !important;
+        }
+    }
+}
